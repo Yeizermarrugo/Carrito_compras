@@ -77,6 +77,7 @@ const actualizarCarrito= () => {
 
         //Nos permite mantener el carrito actualizado con los productos que dejamos dentro aun despues de haber recargado la pagina
         localStorage.setItem('carrito', JSON.stringify(carrito))
+        
     })
     contadorCarrito.innerText = carrito.length
     //Por cada producto que recorra mi carrito le digo a mi acumulador que le sume la propiedad precio a mi producto y le damos el valor inicial al acumulador en cero.
@@ -103,9 +104,6 @@ botonVaciar.addEventListener('click', () => {
 
 pagar.addEventListener('click', () => {
     alert('¡¡Gracias por su compra, vuelva pronto!!')
-
     carrito.length = 0
     actualizarCarrito()
 })
-
-
